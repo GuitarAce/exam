@@ -1,11 +1,21 @@
-function generateString(length) {
+function Random(length){
     characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     result = '';
-    charactersLength = characters.length;
+    let number = characters.length
     for ( let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        result += characters.charAt(Math.floor(Math.random() * number));
     }
-
-    return result;
+    return result
 }
-console.log(generateString(5));
+
+function chckRandom(){
+    let random = Random(4)
+    let answer = 'ABCD';
+    if (random == answer){
+        console.log('true')
+    }else{
+        console.log('false')
+    }
+    return random
+}
+console.log(chckRandom())
